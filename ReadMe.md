@@ -15,12 +15,12 @@ allowing a user to search for titles and pull extra information from the matches
 
 Snapshot of the application
 ## Registration page
-![Image of registration page](public\res\images\register.png)
+![Image of registration page](public/res/images/register.png)
 ## Login  page
-![Image of login page](public\res\images\login.png)
+![Image of login page](public/res/images/login.png)
 ## Home page
-![Image of home page](public\res\images\home.png)
+![Image of home page](public/res/images/home.png)
 ## Search page
-![Image of search page](public\res\images\search.png)
+![Image of search page](public/res/images/search.png)
 ## History page 
-![Image of history page](public\res\images\history.png)
+![Image of history page](public/res/images/history.png)
