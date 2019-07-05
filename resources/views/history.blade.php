@@ -13,12 +13,14 @@
                         <thead>
                             <th>Search String</th>
                             <th>Search Type</th>
+                            <th>Time</th>
                         </thead>
                         <tbody>
                             @foreach ($histories as $history)
                                <tr>
                                     <td>{{urldecode($history['query'])}}</td>
                                     <td>{{$history['type']}}</td>
+                                    <td>{{$history['time']}}</td>
                                 </tr>
                             @endforeach
                         </tbody>

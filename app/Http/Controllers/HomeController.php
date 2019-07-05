@@ -30,11 +30,11 @@ class HomeController extends Controller
     }
 
     public function history(Request $request){
-       $histories = $request->user()->history;
+       $histories = $request->user()->history()->latest()->get();
 
        $data['histories'] = [];
        foreach ($histories as $history) {
-           array_push($data['histories'], ['query'=>$history->query,'type'=>$history->type]);
+           array_push($data['histories'], ['query'=>$history->query,'type'=>$history->type,'time'=> $history->created_at]);
        }
        // return $data;
 
@@ -53,8 +53,8 @@ class HomeController extends Controller
         // return $history;
         $api_key = 'K3X2RJ8Y';
         $base_url = sprintf('http://isbndb.com/api/v2/json/%s/%s?q=%s',$api_key,$request->input('type'),$request->input('query'));
-        $result = sprintf(file_get_contents($base_url));
-        return $result;
+        $result = json_decode(file_get_contents($base_url));
+        return response()->json($result);
     }
 }
 
